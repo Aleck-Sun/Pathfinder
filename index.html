@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Imports unicode and sets browsertab to screensize -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>2D Visual Pathfinder</title>
+
+    <!-- Embed CSS and JavaScript -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unica+One">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="libraries/p5.min.js"></script>
+    <script src="Node.js"></script>
+    <script src="pathfinder.js"></script>
+  </head>
+
+  <!-- Content -->
+  <body>
+    <h1>2D Visual Pathfinder</h1>
+    <!-- Trigger/Open The Modal -->
+    <div id = "instructions">
+      <button id="myBtn">Instructions</button>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class = "modal-header">
+          <span class="close">&times;</span>
+        </div>
+        <div class = "modal-body">
+          <p>Welcome to the 2D pathfinder visualizer!
+            <br>
+            <br>To begin the simulation, click Run Pathfinder. Below, there is a legend
+            explaining what the visual is representing. After the simulation has ended,
+            you can click reset to start a new simulation again.
+            <br>
+            <br>To edit the grid and place new start, end, or wall nodes, select the node you'd like to edit with
+            the drop-down menu on the left. To place start and end nodes, just click anywhere you'd like on the grid. To place
+            a wall node, do the same. To remove wall nodes, simply just click an already existing wall node.
+            <br>
+            <br>To generate pre-configured walls, use the drop-down menu on the right. Just select the configuration you'd like the simulate
+            and it will generate it for you.
+            <br>
+            <br>Enjoy!
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="modal.js"></script>
+
+    <!-- Legend -->
+    <div id = "legendPosition">
+      <ul class="legend">
+        <li><span class="path"></span>Optimal Path / Start / End Nodes</li>
+        <li><span class="wall"></span>Wall Nodes</li>
+        <li><span class="searchPath1"></span>Current Searching Nodes</li>
+        <li><span class="searchPath2"></span>Search Path Nodes</li>
+      </ul>
+    </div>
+  </body>
+</html>
